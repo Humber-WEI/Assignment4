@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Assignment 4</title>
+        <style>
+            div {
+                border: 1px solid red;
+                display: inline-block;
+            }
+            .hover:hover {
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Country:</h1>
+            <h1>CANADA</h1>
+            <h1>Capital:</h1>
+            <h1 id="capital">OTTAWA</h1>
+            <button id="hideCapital">Hide capital name</button><br>
+            <button id="showCapital">Show capital name</button><br>
+            <button id="toggle">Toggle</button><br>
+            <h1 class="hover">Hover on this paragraph for Yellow</h1>
+            <h1 id="click">Click on this paragraph for Green example.</h1>
+        </div>
+        <script>
+
+            document.getElementById("hideCapital").addEventListener("click", function() {
+            document.getElementById("capital").style.display = "none";});
+
+            document.getElementById("showCapital").addEventListener("click", function() {
+            document.getElementById("capital").style.display = "block";});
+
+            document.getElementById("toggle").addEventListener("click", function() {
+            if (document.getElementById("capital").style.display === "none") {
+                document.getElementById("capital").style.display = "block";}
+            else {
+                document.getElementById("capital").style.display = "none"
+            }});
+
+            document.getElementById("click").addEventListener("click", function() {
+            document.getElementById("click").style.backgroundColor = "green"});
+
+        </script>
+    </body>
+</html>
